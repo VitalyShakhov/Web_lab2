@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>История настольного тенниса</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+  <script>
+    document.write("<p>"+document.lastModified+"</p>")
+  </script> 
+  <script type="text/javascript">
+    function nav() {
+      window.alert("Кодовое имя браузера - "+navigator.appCodeName+"\n"+
+        "Имя браузера - "+navigator.appName+"\n"+"Версия браузера"+navigator.appVersion);
+    }
+    function loc() {
+      window.alert("Имя - "+location.hostname+"\n"+"Адрес - "+location.href);
+    }
+    function scr() {
+      window.alert("Ширина экрана - "+screen.width+"\n"+"Длина экрана - "+screen.height);
+    }
+
+    function secondPar() {
+      // Найти второй абзац
+      var secondParagraph = document.querySelectorAll("p")[2];
+
+      // Изменить стили
+      secondParagraph.style.marginRight = "3cm"; // Величина правого поля
+      secondParagraph.style.textIndent = "2.5cm"; // Отступ первой строки
+    }
+
+    function secondParBase() {
+      // Найти второй абзац
+      var secondParagraph = document.querySelectorAll("p")[2];
+
+      // Сбросить стили к первоначальным значениям
+      secondParagraph.style.marginRight = "";
+      secondParagraph.style.textIndent = "";
+    }
+
+    function swapIndexes() {
+      //var tempIndex = div_pic2.style.zIndex;
+      document.getElementById("div_pic2").style.zIndex *= -1;
+      document.getElementById("div_pic3").style.zIndex *= -1;
+    }
+
+  </script> 
+</head>
+
+<body>
+&nbsp;<div class="text">
+    <main>
+      <h1>Появление названия</h1>
+        <p onMouseOver="this.style.color='blue'; this.style.fontSize='20px'"
+            onMouseOut=" this.style.color=''; ; this.style.fontSize=''">
+          Впервые название «Пинг-Понг» стало встречаться 
+          начиная с 1891 года. В 1891 году компанией Jaques 
+          of London был разработан и запущен в производство 
+          комплект для игры в «Пинг-Понг».</p>
+  
+        </details>&nbsp;<h2>Эволюция игры</h2>
+          <p class="news" onMouseOver="secondPar();" onMouseOut="secondParBase();">
+            <span class="date">1902 год - </span>Первое использование ракетки со слоем пористого каучука
+          </p>
+          <p class="news"><span class="date">1926 год - </span>Создание Международной федерации настольного тенниса. 
+            Первый чемпионат мира по настольному теннису</p>
+          <p class="news"><span class="date">1936 год - </span>Введение ограничения на длительность матча</p>
+          <p class="news"><span class="date">1957 год - </span>Создание Европейского союза настольного тенниса</p>
+          <p class="news"><span class="date">1959 год - </span>Унификация ракеток, ужесточение временных ограничений</p>
+          <p class="news"><span class="date">1988 год - </span>Включение настольного тенниса в программу Олимпийских игр</p>
+          <p class="news"><span class="date">2001 год - </span>Изменение правил подачи и количества очков, необходимых для победы, 
+            с 21 до 11</p>
+          <p class="news"><span class="date">2014 год - </span>Смена диаметра и материала мяча с целлюлозы на пластик</p>
+          
+          <div style="z-index: 0; top: 500px; left: 20px;position: absolute">
+            <img src="img/first_img.jpg" width="200px" name="pic1">
+          </div>
+          <div style="z-index: 1; top: 520px; left: 200px;position: absolute" id="div_pic2">
+            <img src="img/second_img.jpg" width="200px">
+          </div>
+          <div style="z-index: -1; top: 600px; left: 100px;position: absolute" id="div_pic3">
+            <img src="img/third_img.jpg" width="200px">
+          </div>
+
+          <form name="form2">
+            <input type="button" value="Спрятать" class="button" OnClick="pic1.style.visibility='hidden'" 
+              onMouseOut="this.className='button'" onMouseOver="this.className='buttonPressed'">
+            <input type="button" value="Показать" class="button" OnClick="pic1.style.visibility='visible'"
+              onMouseOut="this.className='button'" onMouseOver="this.className='buttonPressed'">
+            <input type="button" value="Поменять" class="button" OnClick="swapIndexes();"
+              onMouseOut="this.className='button'" onMouseOver="this.className='buttonPressed'">
+            </form>
+      </main>
+  </div> 
+
+
+  <div class="buttons">
+    <form name="form1">
+      <input type="button" value="Window" class="button" OnClick="" 
+        onMouseOut="this.className='button'" onMouseOver="this.className='buttonPressed'">
+      <input type="button" value="Navigator" class="button" OnClick="nav();"
+        onMouseOut="this.className='button'" onMouseOver="this.className='buttonPressed'">
+      <input type="button" value="Location" class="button" OnClick="loc();"
+        onMouseOut="this.className='button'" onMouseOver="this.className='buttonPressed'">
+      <input type="button" value="Screen" class="button" OnClick="scr();"
+        onMouseOut="this.className='button'" onMouseOver="this.className='buttonPressed'">
+    </form>
+  </div>  
+</body>
+</html>
